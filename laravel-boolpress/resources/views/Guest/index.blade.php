@@ -15,6 +15,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Titolo: {{ $book->name }}</h5>
+                        <p>Categoria: @if ($book->category) {{ $book->category->name }} @else Nessuna categoria @endif</p>
                         <p class="card-text">Autore: {{ $book->author }}</p>
                         <a href="{{ route('guest.book.show', $book->id) }}" class="btn btn-primary">Visualizza</a>
                     </div>
